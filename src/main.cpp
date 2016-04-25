@@ -530,6 +530,7 @@ int main ()
 		std::cout << "\t (" << (i+1) << ") : " << GetDeviceName (deviceIds [i]) << "  MaxWorkGroupSize "<< maxwgs << std::endl;
 		aworld.MaxChunkSize = maxwgs;
 	}
+
     CGLContextObj kCGLContext = CGLGetCurrentContext();
     CGLShareGroupObj kCGLShareGroup = CGLGetShareGroup(kCGLContext);
 
