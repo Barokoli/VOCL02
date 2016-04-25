@@ -539,6 +539,7 @@ int main ()
         (cl_context_properties)kCGLShareGroup, 0
     };
 
+
 	// http://www.khronos.org/registry/cl/sdk/1.1/docs/man/xhtml/clCreateContext.html
 	/*const cl_context_properties contextProperties [] =
 	{
