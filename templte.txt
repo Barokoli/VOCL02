@@ -1,0 +1,26 @@
+|CamDir| = 1
+rightvctr = CamDir x (0,0,1)
+upvctr = rightvctr x CamDir
+
+norm (right,up)
+
+rightvctr = toFov(rightvctr,true)
+upvctr = toFov(upvctr,false)
+
+uppLeft[3] = CamPos - rightvctr*0.5*width + CamDir - upvctr*0.5*height
+
+tPixelDir = CamDir + rightvctr * u + upvctr * v
+
+
+
+
+toFov(vctr,w/h){
+  if(w/h){
+    vctr = vctr*(2*cos(fov)/width)
+  }else{
+    vctr = vctr*(2*cos((height/width)*fov)/height)
+  }
+}
+
+
+castRay(camPos, tPixelDir, chunkData, chunkLength)
